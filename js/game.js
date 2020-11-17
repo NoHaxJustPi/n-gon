@@ -683,7 +683,7 @@ const game = {
         if (!(mech.cycle % 60)) { //once a second
 
             //energy overfill 
-            if (mech.energy > mech.maxEnergy) mech.energy = mech.maxEnergy + (mech.energy - mech.maxEnergy) * (mod.isSlowDecay ? 1.01 : 0.8) //every second energy above max energy loses 20%, 10% w/ mod
+            if (mech.energy > mech.maxEnergy) mech.energy = mech.maxEnergy + (mech.energy - mech.maxEnergy) * (mod.isSlowDecay ? 2 : 0.8) //every second energy above max energy loses 20%, 10% w/ mod
 
             if (mech.pos.y > game.fallHeight) { // if 4000px deep
                 Matter.Body.setVelocity(player, {
