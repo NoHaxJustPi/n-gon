@@ -1073,6 +1073,22 @@ const mod = {
             }
         },
         {
+            name: "improved energy storage",
+            description: "<strong class='color=f'>energy</strong> above your max decays <strong>50%</strong> slower",
+            maxCount: 1,
+            count: 0,
+            allowed() {
+                return mod.isEnergyRecovery || mod.isPiezo || mod.energySiphon > 0 || mod.isRailEnergyGain || mod.isWormholeEnergy || mod.iceEnergy > 0 || mod.isMassEnergy
+            },
+            requires: "a source of overfilled energy",
+            effect() {
+                mod.isSlowDecay = true
+            },
+            remove() {
+                mod.isSlowDecay = false
+            }
+        },
+        {
             name: "scrap recycling",
             description: "if a mob has <strong>died</strong> in the last <strong>5 seconds</strong><br><strong class='color-h'>heal</strong> <strong>1%</strong> of max health every second",
             maxCount: 1,
@@ -3262,5 +3278,6 @@ const mod = {
     isRadioactive: null,
     isRailEnergyGain: null,
     isMineSentry: null,
-    isIncendiary: null
+    isIncendiary: null,
+    isSlowDecay: null
 }
