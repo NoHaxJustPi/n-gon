@@ -1074,7 +1074,7 @@ const mod = {
         },
         {
             name: "improved energy storage",
-            description: "<strong class='color=f'>energy</strong> above your max decays <strong>50%</strong> slower",
+            description: "<strong class='color=f'>energy</strong> above your max <strong>increases</strong> by <strong>1%</strong> per second",
             maxCount: 1,
             count: 0,
             allowed() {
