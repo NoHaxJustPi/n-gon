@@ -1074,7 +1074,7 @@ const mod = {
         },
         {
             name: "improved energy storage",
-            description: "<strong class='color=f'>energy</strong> above your max <strong>increases</strong> by <strong>1%</strong> per second",
+            description: "<strong class='color=f'>energy</strong> above your max <strong>doubles</strong> every second", //this should be enough, right?
             maxCount: 1,
             count: 0,
             allowed() {
